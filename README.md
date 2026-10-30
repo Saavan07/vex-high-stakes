@@ -14,7 +14,7 @@ This source snapshot contains robot configuration, drivetrain and arm PID contro
   - Parallel odometry wheel (2.75") for precise linear position
   - Inertial sensor–based heading hold / turn PID
   - Per-move speed caps (`maxDriveSpeed`, `maxTurnSpeed`)
-  - Settling detection and time-based completion logic
+  - Settling-status tracking in the PID loop; autonomous moves currently use timed waits
 - **“Lady Brown” Arm PID**
   - Rotation sensor feedback
   - 3-state controller (Rest ↔ Loading ↔ Scoring) via controller toggles
@@ -192,7 +192,7 @@ This source snapshot contains robot configuration, drivetrain and arm PID contro
 ---
 
 ### Future Improvements
-- Replace time-based delays with **settle detection** for cleaner autonomous runs.
+- Use the PID loop's existing **settling-status tracking** to finish autonomous moves instead of relying on fixed delays.
 - Modularize auton routines into separate functions for readability.
 - Expand PID to use perpendicular odometry for arc turns.
 
@@ -224,4 +224,4 @@ Feel free to fork for educational use; please credit the original repo.
 
 The repository contains `main.cpp` and `robot-config.h`, rather than a complete exported VEXcode project with its SDK and build configuration. Create or open a VEX V5 C++ project in your development environment, incorporate these source files, and reconcile its generated configuration with the hardware map above.
 
-The October 2026 review inspected source and documentation. Compilation against the VEX SDK and behavior on the physical robot were not rerun. Controller constants and routines are specific to the original robot and require validation before operating different hardware. Standard VEX competition scaffolding and vendor APIs retain their original attribution.
+The October 2026 source review did not include a fresh VEX SDK build or physical-robot test. The controller constants and routines were tuned for our original robot; check them on your hardware before use. Standard VEX competition scaffolding and vendor APIs retain their original attribution.
