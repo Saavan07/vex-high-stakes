@@ -1,6 +1,6 @@
 # VEX High Stakes
 
-C++ competition control software for Velocity Robotics 20020X's VEX V5 robot during the 2024–2025 High Stakes season.
+I was the lead programmer for Velocity Robotics 20020X during the 2024–2025 VEX High Stakes season. This repository contains the C++ control code for our VEX V5 robot.
 
 This source snapshot contains robot configuration, drivetrain and arm PID controllers, driver controls, an active autonomous routine, additional commented routine scaffolds, and an error graph on the V5 Brain for tuning.
 
@@ -216,7 +216,7 @@ This source snapshot contains robot configuration, drivetrain and arm PID contro
 
 ## Attribution
 
-Developed by **Saavan Kiran** for the **2024–2025 High Stakes** season.
+I developed this code for our team's **2024–2025 High Stakes** season.
 Feel free to fork for educational use; please credit the original repo.
 
 
